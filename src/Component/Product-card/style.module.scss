@@ -1,0 +1,148 @@
+.flexItem {
+  @media (max-width: 768px) {
+    flex: 1 1 100%;
+  }
+}
+.cardBorder {
+  position: relative;
+  z-index: 1;
+  width: 320px;
+  height: 480px;
+  margin-bottom: 14px;
+  background-color: #2ea8e6;
+  border-radius: 12px;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+  transition: 0.3s;
+  cursor: pointer;
+  @media (max-width: 768px) {
+    margin: 0 auto 15px;
+  }
+}
+
+.card {
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 312px;
+  height: 472px;
+  padding: 21px 0 0 51px;
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%);
+  overflow: hidden;
+
+  &::before {
+    content: url(../../assets/img/product-card/cat.png);
+    position: absolute;
+    left: 0;
+    bottom: -2%;
+  }
+  &::after {
+    content: '';
+  }
+}
+
+.subTitle {
+  font-size: 16px;
+  line-height: 19px;
+  color: #666666;
+}
+.title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  margin-bottom: 15px;
+
+  span {
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
+.description {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #666666;
+}
+.weight {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  padding-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 5px;
+
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #1698d9;
+
+  font-size: 42px;
+  line-height: 52%;
+  text-align: center;
+
+  color: #ffffff;
+  transition: 0.3s;
+
+  span {
+    font-size: 21px;
+    line-height: 105%;
+  }
+}
+
+.textAfterCard {
+  position: relative;
+  z-index: 1;
+  display: block;
+  text-align: center;
+
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 115%;
+  color: #ffffff;
+
+  span {
+    cursor: pointer;
+    font-weight: bold;
+    color: #1698d9;
+    border-bottom: #1698d9 dashed 1px;
+  }
+}
+.disableText {
+  color: #ffff66;
+}
+
+.selected {
+  background-color: #d91667;
+}
+.selectedHover {
+  color: #d91667;
+}
+.blockDisable {
+	background-color: #b3b3b3;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #b3b3b37e;
+  }
+}
+.bgDisable{
+	background-color: #b3b3b3;
+}
+.colorDisabled {
+  color: #b3b3b3;
+}
